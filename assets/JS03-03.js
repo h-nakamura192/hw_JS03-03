@@ -47,7 +47,7 @@ function createStatusBtn( value, div, index ) {
 
 //出力内容をすべて消去して、再度出力
 function reset() {
-  output.innerHTML = "";
+  output.textContent = "";
   outputHtml();
 }
 
@@ -82,8 +82,9 @@ function outputHtml () {
 }
 
 // 追加ボタンを押下した際に、タスクを追加
-document.getElementById("taskAddBtn").addEventListener("click", function() {
-  output.innerHTML = "";
+const taskAddBtn = document.getElementById("taskAddBtn");
+taskAddBtn.addEventListener("click", function() {
+  output.textContent = "";
   addTask();
   outputHtml();
 }
